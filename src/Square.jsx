@@ -1,17 +1,6 @@
-import { useState } from "react";
-
-function Square() {
-  const [value, setValue] = useState(null);
-
-  function handleClick() {
-    setValue("X");
-  }
-
-  return (
-    <button onClick={handleClick} className="square">
-      {value}
-    </button>
-  );
+// This is a functional component that takes a prop called value and returns a button element with the value prop as its text.
+function Square({ value }) {
+  return <button className="square">{value}</button>;
 }
 
 export default Square;
