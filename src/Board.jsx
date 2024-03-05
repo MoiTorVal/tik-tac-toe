@@ -1,12 +1,8 @@
 // This component will render 9 squares. We will pass the value of each square from the Board component.
-import { useState } from "react";
 import Square from "./Square";
 import calculateWinner from "./calculateWinner";
 
-function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [xIsNext, setXIsNext] = useState(true);
-
+function Board({ xIsNext, squares, onPlay }) {
   const winner = calculateWinner(squares);
   let status;
 
@@ -30,8 +26,7 @@ function Board() {
       nextSquares[i] = "O";
     }
 
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   }
 
   return (

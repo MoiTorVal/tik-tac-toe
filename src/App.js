@@ -1,9 +1,9 @@
 // This is the main component of the application. It renders the Board component.
 import "./App.css";
-import Board from "./Board";
+import Game from "./Game";
 
 function App() {
-  return <Board />;
+  return <Game />;
 }
 
 export default App;
