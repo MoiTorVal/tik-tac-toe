@@ -1,3 +1,4 @@
+// Calculate the winner of the game
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2], // top row
